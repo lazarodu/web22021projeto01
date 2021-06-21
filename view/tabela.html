@@ -1,0 +1,31 @@
+<table border="1">
+  <thead>
+    <tr>
+      <th>Paciente</th>
+      <th>Diagnóstico</th>
+      <th>Idade</th>
+      <th>Editar</th>
+      <th>Remover</th>
+    </tr>
+  </thead>
+  <tbody>
+    {linha}
+    <tr>
+      <td>{paciente}</td>
+      <td>{diag}</td>
+      <td>{idade}</td>
+      <td>
+        <button type="button">Editar</button>
+      </td>
+      <td>
+        <button
+          type="button"
+          onclick="if(confirm('Deseja remover este registro?'))window.location.href='?acao=Tabela&metodo=remover&id={id}';"
+        >
+          Remover
+        </button>
+      </td>
+    </tr>
+    {/linha}
+  </tbody>
+</table>
